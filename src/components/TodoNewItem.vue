@@ -15,6 +15,7 @@
     <v-btn
       :disabled="!valid"
       @click="submit"
+      color="primary"
     >
       Submit
     </v-btn>

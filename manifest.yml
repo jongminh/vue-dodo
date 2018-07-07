@@ -1,0 +1,9 @@
+---
+applications:
+- name: jason-todo
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  memory: 256M
+  routes:
+  - route: jason-todo.cfapps.io
+  command: node server.js
+  timeout: 60

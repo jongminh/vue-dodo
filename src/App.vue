@@ -8,6 +8,7 @@
       enable-resize-watcher
       fixed
       app
+      width=230
     >
       <v-list>
         <v-list-tile
@@ -16,7 +17,7 @@
           :key="i"
         >
           <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title v-text="item.title"></v-list-tile-title>
@@ -80,16 +81,16 @@ export default {
   },
   data() {
     return {
-      clipped: false,
+      clipped: true,
       drawer: false,
       fixed: false,
       items: [
         {
-          icon: "bubble_chart",
-          title: "menu1 - do nothing"
+          icon: 'home',
+          title: "Home"
         }
       ],
-      miniVariant: true,
+      miniVariant: false,
       right: true,
       rightDrawer: false,
       title: "Vue Todo App"
